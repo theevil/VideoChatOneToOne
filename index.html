@@ -1,0 +1,41 @@
+﻿<!--
+> Muaz Khan     - https://github.com/muaz-khan
+> MIT License   - https://www.webrtc-experiment.com/licence/
+> Documentation - https://github.com/muaz-khan/WebRTC-Experiment/tree/master/websocket
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Video Chat</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="./style.css">
+
+        <!-- scripts used for peers connection -->
+        <script src="./adapter-latest.js"></script>
+        <script src="./PeerConnection.js"> </script>
+        <script src="./websocket.js"> </script>
+    </head>
+
+    <body>
+            <section class="experiment">
+                <section>
+					<span>
+                        Private ?? <a href="/websocket/" target="_blank" title="Setup Private Room!"><code><strong id="unique-token">#123456789</strong></code></a>
+                    </span>
+                    <input type="text" id="your-name" placeholder="your-name">
+                    <button id="start-broadcasting" class="setup">Start Transmitting Yourself!</button>
+                </section>
+
+                <!-- list of all available conferencing rooms -->
+                <table id="rooms-list" style="width: 100%;"></table>
+
+                <!-- local/remote videos container -->
+                <div id="videos-container"></div>
+            </section>
+
+            <script src="./client.js"></script>
+    </body>
+</html>
